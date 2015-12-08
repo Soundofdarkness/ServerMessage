@@ -1,0 +1,30 @@
+package com.soundoflight.servermessage;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.java.*;
+
+public class servermessage extends JavaPlugin {
+
+    public void onEnable(){ 
+    	this.getLogger().info("Servermessage has been enabled. You are using verion 0.1.");
+    }
+     
+    public void onDisable(){ 
+     this.getLogger().info("Servermessage has been disabled.");
+    }
+
+    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
+    	if(cmd.getName().equalsIgnoreCase("welcome")){ // Wenn /welcome ausgeführt wird wird ein Willkommen in den chat geschrieben
+    		sender.sendMessage(ChatColor.GOLD + "Willkommen");
+    		return true;
+    	} // Wenn das passiert, wird die Funktion abbrechen und true als Wert zurückgeben.
+    	this.getLogger().info("Fehler beim ausführen von Welcome");
+    	return false;
+    	
+    }
+
+
+	
+}
