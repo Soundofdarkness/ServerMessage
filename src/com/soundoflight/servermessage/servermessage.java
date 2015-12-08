@@ -17,7 +17,8 @@ public class servermessage extends JavaPlugin {
 
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
     	if(cmd.getName().equalsIgnoreCase("welcome")){ // Wenn /welcome ausgeführt wird wird ein Willkommen in den chat geschrieben
-    		sender.sendMessage(ChatColor.GOLD + "Willkommen");
+    		sender.sendMessage(ChatColor.GOLD + "Willkommen auf dem MMO-Server der Lux Caeli!");
+    		this.getLogger().info( "Welcomed new players on the server");
     		return true;
     	} // Wenn das passiert, wird die Funktion abbrechen und true als Wert zurückgeben.
     	this.getLogger().info("Fehler beim ausführen von Welcome");
